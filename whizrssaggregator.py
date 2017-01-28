@@ -27,3 +27,15 @@ class WhizRssAggregator():
             print(thefeedentry.get("link", ""))
             print(thefeedentry.get("description", ""))
             print("__________")
+
+            # Parsing Namespaces
+            for thefeednamespace in thefeed.namespaces:
+                if (thefeednamespace == "media"):
+                    # parse for Yahoo Media
+                    print("Media")
+                    allmediacontent = thefeedentry.get("media_content", "")
+                    for themediacontent in allmediacontent:
+                        print(themediacontent["url"])
+                        print(themediacontent["height"])
+                        print(themediacontent["width"])
+
