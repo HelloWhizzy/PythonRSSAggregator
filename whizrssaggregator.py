@@ -39,3 +39,4 @@ class WhizRssAggregator():
                         print(themediacontent["height"])
                         print(themediacontent["width"])
 
+
